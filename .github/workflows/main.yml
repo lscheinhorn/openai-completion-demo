@@ -1,0 +1,40 @@
+name: Build and deploy with env variables
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  
+permissions: 
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Install and build with env variables
+        run: |
+            echo remove node_modules and package-lock
+            rm -rf node_modules
+            rm -rf package-lock.json
+            echo installing npm modules
+            npm install
+            echo running build
+            npm run build
+        env:
+            REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
+            
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages
+          folder: build
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN_KEY}}
+
