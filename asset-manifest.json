@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/openai-completion-demo/static/css/main.c7579ec4.css",
-    "main.js": "/openai-completion-demo/static/js/main.32223318.js",
+    "main.js": "/openai-completion-demo/static/js/main.0d6afcfd.js",
     "static/js/787.4eddbbcd.chunk.js": "/openai-completion-demo/static/js/787.4eddbbcd.chunk.js",
     "index.html": "/openai-completion-demo/index.html",
     "main.c7579ec4.css.map": "/openai-completion-demo/static/css/main.c7579ec4.css.map",
-    "main.32223318.js.map": "/openai-completion-demo/static/js/main.32223318.js.map",
+    "main.0d6afcfd.js.map": "/openai-completion-demo/static/js/main.0d6afcfd.js.map",
     "787.4eddbbcd.chunk.js.map": "/openai-completion-demo/static/js/787.4eddbbcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7579ec4.css",
-    "static/js/main.32223318.js"
+    "static/js/main.0d6afcfd.js"
   ]
 }
