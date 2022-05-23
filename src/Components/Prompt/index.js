@@ -13,7 +13,7 @@ const openai = new OpenAIApi(configuration);
 
 
 export default function Prompt (props) {
-    const { completions, setCompletions } = props
+    const { setCompletions } = props
     const [ prompt, setPrompt ] = useState("")
     const [ temp, setTemp ] = useState(0.5)
 
