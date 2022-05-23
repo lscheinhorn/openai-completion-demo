@@ -1,4 +1,4 @@
-name: Build with env variables
+name: Build and deploy with env variables
 
 on:
   push:
@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
+  
+permissions: 
+  contents: write
 
 jobs:
   build:
@@ -14,11 +17,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Add env variables
+      - name: Install and build with env variables
         run: |
-            echo Adding environment variables to build!
+            echo installing npm modules
             npm install
-            npm run-script build
+            echo running build
+            npm run build
         env:
             REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
+            
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: main
+          folder: build
 
