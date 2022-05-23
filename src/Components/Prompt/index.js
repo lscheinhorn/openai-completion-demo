@@ -2,8 +2,6 @@ import { useState } from 'react'
 import { Configuration, OpenAIApi } from "openai"
 import './style.css'
 
-console.log(process.env.REACT_APP_API_KEY)
-
 const configuration = new Configuration({
   apiKey: process.env.REACT_APP_API_KEY,
 });
@@ -29,7 +27,6 @@ export default function Prompt (props) {
             presence_penalty: 0,
           })
           const textResponse = response.data.choices[0].text
-          console.log('text', textResponse)
           return textResponse
     }
 
@@ -46,7 +43,6 @@ export default function Prompt (props) {
         const response = await getResponse(prompt, temp)
         setPrompt(response)
         setCompletions(prevState => [...prevState, `${prompt}\n\n${response}`])
-        console.log("response", response)
     }
     
     return (
