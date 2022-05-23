@@ -1,13 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import { Header, Prompt, ResponseList } from './Components'
+import { useState } from 'react'
+import { Header, Prompt, Completions } from './Components'
 
 function App() {
+const [ completions, setCompletions ]  = useState([])
+
   return (
     <div className="App">
       <Header />
-      <Prompt />
-      <ResponseList />
+      <Prompt 
+        completions={ completions }
+        setCompletions={ setCompletions }
+      />
+      <Completions 
+        completions={ completions }
+      />
     </div>
   );
 }
