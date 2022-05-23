@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/openai-completion-demo/static/css/main.c7579ec4.css",
-    "main.js": "/openai-completion-demo/static/js/main.5a3e3c00.js",
+    "main.js": "/openai-completion-demo/static/js/main.c1716564.js",
     "static/js/787.4eddbbcd.chunk.js": "/openai-completion-demo/static/js/787.4eddbbcd.chunk.js",
-    "static/media/logo.svg": "/openai-completion-demo/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/openai-completion-demo/index.html",
     "main.c7579ec4.css.map": "/openai-completion-demo/static/css/main.c7579ec4.css.map",
-    "main.5a3e3c00.js.map": "/openai-completion-demo/static/js/main.5a3e3c00.js.map",
+    "main.c1716564.js.map": "/openai-completion-demo/static/js/main.c1716564.js.map",
     "787.4eddbbcd.chunk.js.map": "/openai-completion-demo/static/js/787.4eddbbcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7579ec4.css",
-    "static/js/main.5a3e3c00.js"
+    "static/js/main.c1716564.js"
   ]
 }
