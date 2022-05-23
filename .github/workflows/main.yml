@@ -21,6 +21,9 @@ jobs:
           node-version: '14'
       - name: Install and build with env variables
         run: |
+            echo remove node_modules and package-lock
+            rm -rf node_modules
+            rm -rf package-lock.json
             echo installing npm modules
             npm install
             echo running build
